@@ -1,0 +1,11 @@
+<section class="full-width flex-grid view-posts">
+  <!-- View Posts Section -->
+  <div class="view-posts__list">
+    <app-list-posts
+      *ngIf="(posts$ | async) !== undefined && (posts$ | async)?.length !== 0"
+      [posts]="(posts$ | async) | slice:0:page"
+      (editPost)="editPost($event)">
+    </app-list-posts>
+  </div>
+  <div *ngIf="!(posts$ | async)?.length">No posts available...</div>
+</section>

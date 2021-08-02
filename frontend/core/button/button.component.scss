@@ -1,0 +1,88 @@
+@import './src/styles-variables';
+
+/*************************************************************
+               button variables
+*************************************************************/
+// button text
+$button-text-color: #ffffff !default;
+// button border
+$button-border: 1px solid $app-primary-color !default;
+// button disabled
+$button-disabled-background: #eeeeee !default;
+$button-disabled-text-color: #9d9d9d !default;
+// button icon
+$button-icon-color: $app-secondary-color !default;
+
+// spinner border
+$loading-spinner-border: #f3f3f3 !default;
+$loading-spinner-border-top: $app-tertiary-color !default;
+
+button {
+  margin: 0;
+  padding: 0;
+}
+
+.button {
+  display: flex;
+  cursor: pointer;
+  align-items: center;
+  background: $app-tertiary-color;
+  border-radius: 4px;
+  color: $button-text-color;
+  border: $button-border;
+  text-decoration: none;
+  font-family: $app-font-family-bold;
+  padding: 12px 24px;
+  margin: 0 10px;
+
+  &.disabled, &:disabled {
+    opacity: 1;
+    background: $button-disabled-background;
+    color: $button-disabled-text-color;
+
+    &:hover,
+    &:focus {
+      opacity: 1;
+      background: $button-disabled-background;
+      color: $button-disabled-text-color;
+    }
+  }
+
+  &:hover, &:focus {
+    background: $app-hover-color;
+  }
+}
+
+.button--icon {
+  background: transparent;
+  color: $button-icon-color;
+  border: none;
+  padding: 0;
+  margin: 0;
+  cursor: pointer;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  text-align: center;
+  position: relative;
+  z-index: 1;
+  transition: transform ease-out 0.1s, background 0.2s;
+
+  &:hover, &:focus {
+    transform: scale(0.93);
+    color: #ffffff;
+    background: $app-hover-color;
+
+    .button--icon__container__display {
+        font-size: 20px;
+    }
+  }
+
+  &__container {
+    margin: 0 auto;
+
+    &__display {
+      font-size: 24px;
+    }
+  }
+}

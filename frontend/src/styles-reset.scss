@@ -1,0 +1,12 @@
+/* reset styles */
+
+* {
+  &:active,
+  :focus {
+    outline: none !important;
+  }
+}
+
+label {
+  margin-bottom: 0;
+}

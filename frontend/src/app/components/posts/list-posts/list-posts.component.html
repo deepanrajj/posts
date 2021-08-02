@@ -1,0 +1,24 @@
+<div *ngFor="let post of posts"
+     [id]="'list-post__' + post.id"
+     class="list-post">
+  <div class="list-post__header">
+    <div class="list-post__header__title">
+      {{post.title | titlecase}}
+    </div>
+    <div class="list-post__header__button">
+      <app-button [button]="setupEditButton(modalTemplate, post)"></app-button>
+    </div>
+  </div>
+  <div class="list-post__body">
+    {{post.body}}
+  </div>
+</div>
+
+<ng-template #modalTemplate>
+  <div class="modal-header post-modal__header">
+    <div class="post-modal__header__title">Post Edit</div>
+  </div>
+  <div class="post-modal__body">
+    <app-update-post *ngIf="updatePostModel" [updatePost]="updatePostModel"></app-update-post>
+  </div>
+</ng-template>

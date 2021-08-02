@@ -1,0 +1,27 @@
+$app-primary-color: #efefef;
+$app-secondary-color: #17171d;
+$app-tertiary-color: #2099cd;
+$app-hover-color: #4cb1dd;
+$app-font-family: 'Poppins', sans-serif;
+$app-font-family-semi-bold: 'Poppins-SemiBold', sans-serif;
+$app-font-family-bold: 'Poppins-Bold', sans-serif;
+
+$success: #2ecc71;
+$danger: #e74c3c;
+
+$link-hover-decoration: none;    // remove underline from button links
+
+@font-face {
+  font-family: 'Poppins';
+  src: url('./assets/fonts/Poppins-Regular.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Poppins-SemiBold';
+  src: url('./assets/fonts/Poppins-SemiBold.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Poppins-Bold';
+  src: url('./assets/fonts/Poppins-Bold.ttf') format('truetype');
+}

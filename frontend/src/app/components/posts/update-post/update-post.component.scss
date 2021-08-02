@@ -1,0 +1,33 @@
+@import './src/styles-variables';
+
+.update-post {
+  padding: 10px 50px 20px;
+
+  &__field {
+    display: flex;
+    flex-direction: column;
+    margin-top: 10px;
+
+    label {
+      font-family: $app-font-family-semi-bold;
+      font-size: 16px;
+      margin-bottom: 10px;
+    }
+
+    &__control {
+      padding: 10px 0 10px 10px;
+      border-radius: 5px;
+      box-shadow: inset 4px 6px 10px -4px rgba(0, 0, 0, 0.3), 0 1px 1px -1px rgba(255, 255, 255, 0.3);
+      outline: none;
+      border: 1px solid rgba(0, 0, 0, 0.25);
+      margin-bottom: 10px;
+      color: #6E6E6E;
+    }
+  }
+
+  &__buttons {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+  }
+}

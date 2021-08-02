@@ -1,0 +1,37 @@
+// Different screen sizes
+$media-breakpoints: (
+  xs: 0,
+  sm: 576px,
+  md: 768px,
+  lg: 992px,
+  xl: 1200px
+);
+
+// Write media query between breakpoints
+@mixin media-query-between($lower, $upper) {
+
+  // Check if breakpoints exist
+  @if map-has-key($media-breakpoints, $lower) and map-has-key($media-breakpoints, $upper) {
+    $lower-breakpoint: map-get($media-breakpoints, $lower);
+    $upper-breakpoint: map-get($media-breakpoints, $upper);
+
+    @media (min-width: $lower-breakpoint) and (max-width: ($upper-breakpoint - 1)) {
+      @content;
+    }
+  }
+}
+
+
+// Write media query below breakpoint
+@mixin media-query-below($breakpoint) {
+
+  // Check if breakpoint exist
+  @if map-has-key($media-breakpoints, $breakpoint) {
+    $breakpoint-value: map-get($media-breakpoints, $breakpoint);
+
+    // Includes media query with max width
+    @media (max-width: ($breakpoint-value - 1)) {
+      @content;
+    }
+  }
+}

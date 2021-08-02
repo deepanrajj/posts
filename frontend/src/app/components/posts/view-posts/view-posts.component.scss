@@ -1,0 +1,10 @@
+@import './core/mixins/media-queries';
+
+.view-posts {
+  width: 60%;
+}
+@include media-query-below(sm) {
+  .view-posts {
+    width: 100%;
+  }
+}

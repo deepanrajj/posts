@@ -1,0 +1,29 @@
+<form class="update-post"
+      [formGroup]="updatePost.editForm"
+      (ngSubmit)="updatePost.submit(updatePost.editForm)">
+  <div class="update-post__field">
+    <label for="post-title">Title</label>
+    <input class="update-post__field__control" formControlName="title" id="post-title" type="text"/>
+    <!-- Validation Errors Container -->
+    <div class="dynamic-form__group__error">
+      <div *ngIf="!isValid('title')">
+        {{'* Required'}}
+      </div>
+    </div>
+  </div>
+  <div class="update-post__field">
+    <label for="post-body">Body</label>
+    <textarea class="update-post__field__control" formControlName="body" id="post-body" rows="6"></textarea>
+    <!-- Validation Errors Container -->
+    <div class="dynamic-form__group__error">
+      <div *ngIf="!isValid('body')">
+        {{'* Required'}}
+      </div>
+    </div>
+  </div>
+  <div class="update-post__buttons">
+    <app-button *ngFor="let button of updatePost.buttons"
+                [button]="button"
+                [disabled]="button.disableOnInvalidForm ? checkFormInValid() : false"></app-button>
+  </div>
+</form>

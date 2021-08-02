@@ -1,0 +1,50 @@
+@import './src/styles-variables';
+
+/*************************************************************
+               view posts variables
+*************************************************************/
+$list-post-background: #ffffff !default;
+$list-post-box-shadow: rgba(0, 0, 0, 0.24) 0 3px 8px !default;
+
+
+.list-post {
+  display: flex;
+  flex-direction: column;
+  background: $list-post-background;
+  border-radius: 10px;
+  margin: 20px auto;
+  padding: 10px 20px;
+  width: 80%;
+  box-shadow: $list-post-box-shadow;
+  cursor: pointer;
+
+  &__header {
+    display: flex;
+    justify-content: space-between;
+
+    &__title {
+      font-family: $app-font-family-semi-bold;
+      font-size: 16px;
+    }
+
+    &__button {
+      margin-top: -5px;
+    }
+  }
+
+  &__body {
+    margin-top: 5px;
+  }
+}
+
+
+.post-modal {
+
+  &__header {
+
+    &__title {
+      font-family: $app-font-family-semi-bold;
+      font-size: 20px;
+    }
+  }
+}

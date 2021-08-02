@@ -1,0 +1,12 @@
+<button *ngIf="button" [id]="button?.id"
+        [type]="button?.type || 'button'"
+        class="button {{button?.class ? button?.class : ''}}"
+        [ngClass]="{'button--icon' : button?.iconClassName}"
+        (click)="button.onClick ? button.onClick(button) : ''"
+        [disabled]="button?.disabled || disabled"
+        [title]="button?.tooltip">
+  <span *ngIf="button?.text">{{button.text}}</span>
+  <span class="button--icon__container" *ngIf="button?.iconClassName">
+    <i class="button--icon__container__display {{button.iconClassName}}"></i>
+  </span>
+</button>

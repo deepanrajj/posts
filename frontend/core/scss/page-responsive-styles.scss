@@ -1,0 +1,25 @@
+@import './core/mixins/media-queries';
+
+.flex-grid {
+  display: flex;
+  flex-shrink: 0;
+  justify-content: space-between;
+  margin: 0 auto;
+
+  &--column {
+    flex-direction: column;
+  }
+
+}
+
+.full-width {
+  max-width: 1200px;
+  width: 100%;
+}
+
+@include media-query-between(xs, md) {
+  .flex-grid {
+    flex-direction: column;
+    flex-wrap: nowrap;
+  }
+}

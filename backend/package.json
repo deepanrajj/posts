@@ -1,0 +1,28 @@
+{
+  "name": "backend",
+  "version": "1.0.0",
+  "description": "post backend",
+  "main": "index.js",
+  "engines": {
+    "node": "12.16.2",
+    "npm": "6.14.4"
+  },
+  "scripts": {
+    "start": "node index.js",
+    "server": "nodemon index.js",
+    "client": "npm run start --prefix ../frontend/",
+    "dev": "concurrently \"npm run server\" \"npm run client\""
+  },
+  "keywords": [
+    "backend"
+  ],
+  "author": "Deepan Raj Jayaseelan",
+  "license": "ISC",
+  "dependencies": {
+    "concurrently": "^6.0.0",
+    "axios": "^0.19.2",
+    "cors": "^2.8.5",
+    "express": "^4.17.1",
+    "nodemon": "^2.0.7"
+  }
+}
